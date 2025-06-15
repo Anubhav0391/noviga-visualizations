@@ -77,3 +77,33 @@ index.html
 ```
 
 
+---
+
+## 🧪 Tech Stack
+
+- ⚛️ React
+- 📊 Highcharts + highcharts-react-official
+- 🧩 React Flow + dagre layout
+- 📦 Redux Toolkit
+- ⏱️ moment.js
+- 🎨 Material UI (MUI)
+- 🔔 react-toastify
+- 📁 Vite
+
+---
+
+## ▶️ How to Run Locally
+
+```bash
+# Step 1: Clone the repository
+git clone https://github.com/Anubhav0391/noviga-visualizations.git
+cd project-name
+
+# Step 2: Install dependencies
+npm install
+
+# Step 3: Start development server
+npm run dev
+
+
+
