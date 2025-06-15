@@ -158,15 +158,15 @@ The data was provided as static JSON files emulating API responses.
 ### 5. Key Technical Choices
 
 
-| Decision              | Reason                                                                 |
-|-----------------------|------------------------------------------------------------------------|
-| `React Flow`          | For visually interactive and draggable graph rendering                 |
-| `Highcharts`          | Mature and flexible library for responsive and customizable charts     |
-| `Redux`               | Centralized and scalable state management                              |
-| `Moment.js`           | Simplified ISO date and time-based comparisons                         |
-| `Vite + TypeScript`   | Fast build toolchain with static typing and modular architecture       |
+| **Decision**         | **Reason**                                                                                                                |
+|----------------------|---------------------------------------------------------------------------------------------------------------------------|
+| `React Flow`         | Highly customizable and interactive. Optimized for handling 500 –10,000 nodes based on use case.                          |
+| `Highcharts`         | Mature and flexible library for responsive and customizable charts. Uses canvas and is optimized for 50,000+ data points. |
+| `Redux Toolkit`      | Simplifies state management with built-in best practices and reduced boilerplate.                                         |
+| `Vite + TypeScript`  | Fast build toolchain with static typing and modular architecture.                                                         |
 
----
+
+
 
 
 
