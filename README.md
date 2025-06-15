@@ -32,3 +32,46 @@ This is a simulation-based frontend project built with **React**, **Redux**, **H
 
 ## 🧱 Folder Structure
 
+public/
+├── data/
+│ ├── Machine1-SSP0173/
+│ │ ├── changelog.json
+│ │ ├── prediction_data.json
+│ │ ├── timeseries_cycledata_red.json
+│ │ ├── timeseries_cycledata_green.json
+│ │ └── timeseries_cycledata_black.json
+│ ├── Machine2-SSP0167/
+│ │ └── [similar structure]
+│ └── graphViz.json
+src/
+├── components/
+│ ├── scatterPlot/
+│ │ ├── LineChart.tsx
+│ │ ├── ScatterChart.tsx
+│ │ └── SearchBar.tsx
+│ ├── treeView/
+│ │ ├── TreeGraph.tsx
+│ │ ├── CustomNode.tsx
+│ │ └── SelfConnectingEdge.tsx
+│ ├── SideNav.tsx
+│ └── Spinner.tsx
+├── lib/
+│ └── theme.js
+├── pages/
+│ ├── ScatterPlot.tsx
+│ └── TreeView.tsx
+├── redux/
+│ ├── slices/
+│ │ ├── scatterPlotSlice.ts
+│ │ └── treeViewSlice.ts
+│ └── store.ts
+├── types/
+│ ├── scatterPlotTypes.ts
+│ └── treeViewTypes.ts
+├── App.tsx
+├── index.css
+├── main.tsx
+├── utils.ts
+index.html
+
+
