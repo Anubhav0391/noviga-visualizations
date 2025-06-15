@@ -105,5 +105,69 @@ npm install
 # Step 3: Start development server
 npm run dev
 
+---
+
+## 🧠 Approach
+
+### 1. Problem Understanding
+
+The goal was to build a **visual analytics interface** for analyzing machine cycle data:
+
+- Allow visual identification of anomalies via a **scatter plot**
+- Show detailed **time series charts** for selected cycles
+- Represent **machine flow/connection** as an interactive **tree graph**
+
+The data was provided as static JSON files emulating API responses.
+
+---
+
+### 2. Data Flow & Structure
+
+- JSON files from the `public/data/` directory act as the source of truth.
+- Redux is used to manage filters, selected tools, time-series data, and changelog information.
+- Typescript types in the `types/` directory define and enforce structure across the codebase.
+
+---
+
+### 3. Visual Components Breakdown
+
+- **`ScatterChart`**  
+  Plots cycle points as anomalies / normal / unknown using Highcharts.  
+  Clicking a point fetches and shows its corresponding time-series chart.
+
+- **`LineChart`**  
+  Displays the `spindle_1_load` signal over time along with an "ideal" threshold line for comparison.
+
+- **`TreeGraph`**  
+  Uses React Flow and Dagre to render machine connections.  
+  - Handles bypasses and self-loops visually  
+  - Supports node dragging and layout switching  
+  - Allows focus and zoom on node click  
+
+---
+
+### 4. Layout & UX Strategy
+
+- Tree layout is toggleable between **Top-Bottom (TB)** and **Left-Right (LR)** using a `Switch`.
+- Edge types are toggleable between **Step** and **Bezier** for visual clarity.
+- Nodes snap into layout automatically using **Dagre** after data load or toggle.
+- **Zoom-to-fit** and **node focus** behavior enhances navigation and interaction.
+
+---
+
+### 5. Key Technical Choices
+
+```
+| Decision              | Reason                                                                 |
+|-----------------------|------------------------------------------------------------------------|
+| `React Flow`          | For visually interactive and draggable graph rendering                 |
+| `Highcharts`          | Mature and flexible library for responsive and customizable charts     |
+| `Redux`               | Centralized and scalable state management                              |
+| `Moment.js`           | Simplified ISO date and time-based comparisons                         |
+| `Vite + TypeScript`   | Fast build toolchain with static typing and modular architecture       |
+```
+---
+
+
 
 
