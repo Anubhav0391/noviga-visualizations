@@ -1,4 +1,4 @@
-# 🛠️ Industrial Monitoring Dashboard (React + Highcharts + React Flow)
+# 🛠️ Industrial Monitoring Dashboard 
 
 ## 📋 Overview
 
