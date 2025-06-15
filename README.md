@@ -32,6 +32,36 @@ This is a simulation-based frontend project built with **React**, **Redux**, **H
 
 ## 🧱 Folder Structure
 
+
+├── node_modules (.gitignore)
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+│   └── manifest.json
+├── src
+│   ├── assets
+│   │   │   ├── images
+│   │   │   └── logo.svg
+│   ├── constants
+│   │   └── data.js
+│   ├── components
+│   │   ├── app
+│   │   │   ├── App.css
+│   │   │   ├── App.jsx
+│   │   │   └── App.test.js
+│   │   └── index.js
+│   ├── utils
+│   │   ├── ...
+│   │   └── index.js
+│   ├── index.css
+│   ├── index.js
+│   ├── serviceWorker.js
+│   └── setupTests.js
+├── .gitignore
+├── package.json
+└── README.md
+└── yarn.lock
+
 public/
 ├── data/
 │ ├── Machine1-SSP0173/
