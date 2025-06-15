@@ -34,9 +34,13 @@ This is a simulation-based frontend project built with **React**, **Redux**, **H
 
 
 ├── node_modules (.gitignore)
+
 ├── public
+
 │   ├── favicon.ico
+
 │   ├── index.html
+
 │   └── manifest.json
 ├── src
 │   ├── assets
