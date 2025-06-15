@@ -124,7 +124,7 @@ The data was provided as static JSON files emulating API responses.
 
 ### 2. Data Flow & Structure
 
-- JSON files from the `public/data/` directory act as the source of truth.
+- JSON files from the `public/data/` directory act as the database. `public` directory allows to mimic api calls.
 - Redux is used to manage filters, selected tools, time-series data, and changelog information.
 - Typescript types in the `types/` directory define and enforce structure across the codebase.
 
