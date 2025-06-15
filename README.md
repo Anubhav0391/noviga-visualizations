@@ -104,7 +104,7 @@ npm install
 
 # Step 3: Start development server
 npm run dev
-
+```
 ---
 
 ## 🧠 Approach
@@ -157,7 +157,7 @@ The data was provided as static JSON files emulating API responses.
 
 ### 5. Key Technical Choices
 
-
+```
 | Decision              | Reason                                                                 |
 |-----------------------|------------------------------------------------------------------------|
 | `React Flow`          | For visually interactive and draggable graph rendering                 |
@@ -165,7 +165,7 @@ The data was provided as static JSON files emulating API responses.
 | `Redux`               | Centralized and scalable state management                              |
 | `Moment.js`           | Simplified ISO date and time-based comparisons                         |
 | `Vite + TypeScript`   | Fast build toolchain with static typing and modular architecture       |
-
+```
 ---
 
 
