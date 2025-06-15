@@ -14,6 +14,7 @@ This is a simulation-based frontend project built with **React**, **Redux**, **H
 
 ### 📈 Scatter Data Module
 - Visualizes cycle data as **scatter plots**.
+- Clicking `Show Comparision` splits in two charts for comparision.
 - Clicking a scatter point shows **time series data** in a **line chart**.
 - Highlights anomalies and unprocessed data visually.
 - Filters data based on machine, date, and tool configuration.
