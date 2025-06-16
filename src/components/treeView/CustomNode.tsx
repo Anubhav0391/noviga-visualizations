@@ -268,7 +268,7 @@ const CustomNode = (props: NodeProps) => {
         <Handle type="source" position={props.sourcePosition as Position} />
         <Handle type="target" position={props.targetPosition as Position} />
       </Box>
-      {props.selected && !props.dragging && editDetailsPopup}
+      {props.selected && editDetailsPopup}
       {hovered && !props.selected && previewDetailsPopup}
     </Box>
   );

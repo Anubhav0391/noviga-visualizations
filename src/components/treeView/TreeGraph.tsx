@@ -93,7 +93,7 @@ const TreeGraph: React.FC<{ treeData: TreeData }> = ({ treeData }) => {
   const [edgeType, setEdgeType] = useState<"step" | "bezier">("step");
   const [nodes, setNodes, onNodesChange] = useNodesState<Node>([]);
   const [edges, setEdges, onEdgesChange] = useEdgesState<Edge>([]);
-  const {  fitView } = useReactFlow();
+  const { fitView } = useReactFlow();
 
   const bringToFront = (nodeId: string) => {
     setNodes((nds) => {
@@ -201,6 +201,7 @@ const TreeGraph: React.FC<{ treeData: TreeData }> = ({ treeData }) => {
           edgeTypes={{ selfconnecting: SelfConnectingEdge }}
           nodeTypes={{ custom: CustomNode }}
           onNodeClick={onNodeClick}
+          selectNodesOnDrag={false}
           onNodesChange={onNodesChange}
           onEdgesChange={onEdgesChange}
           fitView
