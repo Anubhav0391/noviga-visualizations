@@ -15,7 +15,7 @@ import { toast } from "react-toastify";
 import Spinner from "../components/Spinner";
 
 function ScatterPlot() {
-  const [selectedCycle, setSelectedCycle] = useState<CycleData>();
+  const [selectedCycle, setSelectedCycle] = useState<CycleData | null>(null);
   const {
     filters,
     predictionData,
@@ -68,9 +68,15 @@ function ScatterPlot() {
         gap={2}
         sx={{ opacity: loadings.timeSeries ? 0.8 : 1 }}
       >
-        <SearchBar />
+        <SearchBar setSelectedCycle={setSelectedCycle} />
         {toolSequences && (
-          <Stack gap={1} border={"1px solid gainsboro"} bgcolor={"background.default"} borderRadius={5} p={2}>
+          <Stack
+            gap={1}
+            border={"1px solid gainsboro"}
+            bgcolor={"background.default"}
+            borderRadius={5}
+            p={2}
+          >
             <Typography color="primary">Unprocessed Tool</Typography>
             <Stack direction={"row"} gap={2} flexWrap={"wrap"}>
               {Object.entries(predictionData.Result.unprocessed_sequences).map(

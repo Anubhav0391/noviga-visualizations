@@ -24,7 +24,7 @@ import {
 } from "../../redux/slices/scatterPlotSlice";
 import { useDispatch, useSelector } from "react-redux";
 import type { Dispatch, RootState } from "../../redux/store";
-import type { Filters } from "../../types/scatterPlotTypes";
+import type { CycleData, Filters } from "../../types/scatterPlotTypes";
 import { formatTime } from "../../utils";
 
 const CustomFilledInput = styled((props: TextFieldProps) => (
@@ -75,9 +75,13 @@ const commonSlotProps: TextFieldProps = {
   },
 };
 
-export default function SearchBar() {
+export default function SearchBar({
+  setSelectedCycle,
+}: {
+  setSelectedCycle: (v: CycleData | null) => void;
+}) {
   const dispatch = useDispatch<Dispatch>();
-  const { filters, changeLogData,showComparison } = useSelector(
+  const { filters, changeLogData, showComparison } = useSelector(
     (store: RootState) => store.scatterPlot
   );
   const toolSequences =
@@ -123,6 +127,7 @@ export default function SearchBar() {
     } else {
       dispatch(setSelectedTool(filters.tool));
     }
+    setSelectedCycle(null);
   };
 
   const handleComparison = () => {
@@ -143,7 +148,7 @@ export default function SearchBar() {
         pl={"76px"}
         top={0}
         left={0}
-        bgcolor={'background.paper'}
+        bgcolor={"background.paper"}
       >
         <Grid size={{ xs: 6, md: 3, lg: "grow" }}>
           <FormControl variant="standard" sx={{ width: "100%" }}>
@@ -218,7 +223,7 @@ export default function SearchBar() {
             onClick={handleComparison}
             sx={{ lineHeight: 1.3 }}
           >
-            {showComparison?'Hide':'Show'} Comparison
+            {showComparison ? "Hide" : "Show"} Comparison
           </CustomButton>
         </Grid>
       </Grid>

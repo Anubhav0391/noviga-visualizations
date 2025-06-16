@@ -36,8 +36,6 @@ export default function Sidebar() {
           transition: "width 0.3s",
           overflowX: "hidden",
           bgcolor: "background.default",
-          border: "none",
-          boxShadow:'rgba(0, 0, 0, 0.1) 0px 1px 2px 0px'
         },
       }}
     >
