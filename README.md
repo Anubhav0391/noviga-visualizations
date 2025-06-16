@@ -98,7 +98,7 @@ index.html
 ```bash
 # Step 1: Clone the repository
 git clone https://github.com/Anubhav0391/noviga-visualizations.git
-cd project-name
+cd noviga-visualizations
 
 # Step 2: Install dependencies
 npm install
