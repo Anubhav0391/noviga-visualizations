@@ -148,6 +148,7 @@ export default function SearchBar({
         pl={"76px"}
         top={0}
         left={0}
+        width={'100%'}
         bgcolor={"background.paper"}
       >
         <Grid size={{ xs: 6, md: 3, lg: "grow" }}>
