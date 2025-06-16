@@ -158,7 +158,9 @@ const CustomNode = (props: NodeProps) => {
               if (btn.includes("bypass")) return "primary";
             }
 
-            function handleClick() {
+            function handleClick(e: React.MouseEvent<HTMLButtonElement>) {
+              // this is for preventing node focus while an action in edit popup
+              e.stopPropagation();
               if (btn === "Save") {
                 // in this block, we can call put/patch API for updating node details in database
                 const newId = String(
