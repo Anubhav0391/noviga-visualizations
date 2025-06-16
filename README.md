@@ -137,7 +137,7 @@ The data was provided as static JSON files emulating API responses.
   Clicking a point fetches and shows its corresponding time-series chart.
 
 - **`LineChart`**  
-  Displays the `spindle_1_load` signal over time along with an "ideal" threshold line for comparison.
+  Displays the `actual signals` over time along with an `ideal signals`.
 
 - **`TreeGraph`**  
   Uses React Flow and Dagre to render machine connections.  
